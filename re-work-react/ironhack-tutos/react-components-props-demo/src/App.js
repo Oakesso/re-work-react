@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import Student from "./Component/Student";
+import Classrom from "./Component/Classroom";
+import UsersList from "./Component/UsersList";
+import React from "react";
+import ReactPlayer from "react-player";
+
+function GreetingMessage() {
+  const message = "Hello Ana!";
+  return (
+    <div>
+      <u>{message}</u>
+    </div>
+  );
+}
+
+function WelcomeBlock() {
+  return (
+    <div>
+      <GreetingMessage />
+      <em>Welcome to our cool page. It is pleasure to have you here!</em>
+    </div>
+  );
+}
+
+function User(props) {
+  console.log(props);
+  return <div>User is: {props.firstName}</div>;
+}
+
+class Color extends React.Component {
+  render() {
+    return <div>{this.props.favColor}</div>;
+  }
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GreetingMessage />
+      <hr />
+      <WelcomeBlock />
+      <hr />
+      <Student />
+      <hr />
+      <Classrom />
+      <hr />
+      <UsersList>
+        <User firstName="Harper" />
+        <User firstName="Mike" />
+        <User firstName="Alvaro" />
+        <User firstName="Andrea" />
+      </UsersList>
+      <hr />
+      <Color favColor="blue" />
     </div>
   );
 }
