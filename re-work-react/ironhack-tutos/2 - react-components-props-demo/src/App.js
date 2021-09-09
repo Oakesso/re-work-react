@@ -45,13 +45,19 @@ function App() {
       <Classrom />
       <hr />
       <UsersList>
-        <User firstName="Harper" />
-        <User firstName="Mike" />
-        <User firstName="Alvaro" />
-        <User firstName="Andrea" />
+        <User firstName="Harper" age="31" />
+        <User firstName="Mike" age="32" />
+        <User firstName="Alvaro" age="33" />
+        <User firstName="Andrea" age="34" />
       </UsersList>
       <hr />
       <Color favColor="blue" />
+      <hr />
+      <ReactPlayer
+        url="https://www.youtube.com/watch?v=_nrm_vei5TE&t=15s"
+        controls
+        volume="0.5"
+      />
     </div>
   );
 }
